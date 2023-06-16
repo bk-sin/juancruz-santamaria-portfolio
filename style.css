@@ -130,7 +130,7 @@ h1:nth-child(odd) {
   right: 50%;
   transform: translateX(50%);
   margin-inline: auto;
-  position: absolute;
+  position: fixed;
   align-items: flex-start;
 }
 
