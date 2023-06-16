@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("navbar.html")
+      })
+    </script>
+    <div id="navbar"></div>
+    <main>
+      <div class="hero-container">
+        <h1>UX<span style="letter-spacing: 8px">/</span>UI</h1>
+        <h1 style="margin-bottom: 0px">DESIGNER</h1>
+        <h1 style="margin-bottom: 20px">BASED</h1>
+        <h1>IN BS AS</h1>
+        <img src="/public/images/misc/star.svg" class="title-star" />
+        <img src="/public/images/misc/dropper.svg" class="title-dropper" />
+        <img
+          src="/public/images/misc/finger-pointing.svg"
+          class="title-finger_pointing"
+        />
+      </div>
+      <div class="aboutme-container">
+        <div>
+          <h3>About me</h3>
+          <p>
+            Hey there! I'm Juan, an experienced UX/UI designer with a background
+            in graphic design who specializes in crafting outstanding web and
+            mobile experiences.
+          </p>
+          <p style="letter-spacing: 0.03em">
+            I believe in fostering a collaborative and fun atmosphere while
+            delivering top-notch designs. So, whether it's wireframing,
+            prototyping, or putting the finishing touches on a pixel-perfect
+            website, I bring a chill vibe and a passion for creating web
+            experiences that leave a lasting impact.
+          </p>
+        </div>
+        <img src="/public/images/moe-face.png" />
+      </div>
+    </main>
+  </body>
+</html>
