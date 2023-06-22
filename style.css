@@ -323,4 +323,5 @@ h4 {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
