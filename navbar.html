@@ -1,11 +1,61 @@
 <div class="navbar-container">
   <img src="/public/images/juan logo.svg" alt="juan logo brand" />
-  <ul>
-    <li class="active">About</li>
-    <li>Work</li>
-    <li>Contact</li>
+  <ul id="sections">
+    <li class="link active" onclick="goToAbout()" href="#about">About</li>
+    <li class="link" onclick="goToWork()" href="#work">Work</li>
+    <li class="link" onclick="goToFooter()" href="#footer">Contact</li>
   </ul>
 </div>
 <div class="contact-cloud__container">
-  <div class="contact-cloud"><p>Get in touch</p></div>
+  <div
+    class="contact-cloud"
+    onclick="location.href='mailto:juancruz.santamaria@gmail.com'"
+  >
+    <p>Get in touch</p>
+  </div>
 </div>
+<script>
+  var links = document.getElementById("sections").getElementsByClassName("link")
+  var sections = document.querySelectorAll("section")
+  var navLinks = document.querySelectorAll("#sections li")
+
+  window.onscroll = () => {
+    sections.forEach((sec) => {
+      let top = window.scrollY
+      let offset = sec.offsetTop
+      let height = sec.offsetHeight
+      let id = sec.getAttribute("id")
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((links) => {
+          links.classList.remove("active")
+          document.querySelector("[href*=" + id + "]").classList.add("active")
+        })
+      }
+      if (document.body.offsetHeight - window.innerHeight - top === 0) {
+        navLinks.forEach((links) => {
+          links.classList.remove("active")
+          document.querySelector("[href*='footer']").classList.add("active")
+        })
+      }
+    })
+  }
+
+  function goToAbout() {
+    $("html,body").animate({
+      scrollTop: $("#about").offset().top,
+    })
+  }
+  function goToWork() {
+    $("html,body").animate({
+      scrollTop: $("#work").offset().top,
+    })
+  }
+  function goToFooter() {
+    $("html,body").animate({
+      scrollTop: $("#footer").offset().top,
+    })
+  }
+  function goToEmail() {
+    window.location = "mailto:juancruz.santamaria@gmail.com"
+  }
+</script>
